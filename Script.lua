@@ -548,6 +548,7 @@ AddEmote("Big Bad Wolf", 107112614895073)
 AddEmote("Cuco - Levitate", 15698511500)
 AddEmote("Victory Dance", 15506503658)
 AddEmote("HUGO Let's Drive!", 17360720445)
+AddEmote("Beauty Touchdown", 16303091119)
 
 
 --finished loading
