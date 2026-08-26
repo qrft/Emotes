@@ -545,8 +545,8 @@ AddEmote("Mii Height Swing", 95276923919374)
 AddEmote("Slow Dembow", 73236219340808)
 AddEmote("Yungblud Happier Jump", 15610015346)
 AddEmote("Big Bad Wolf", 107112614895073)
-AddEmote("Big Bad Wolf", 15698511500)
-AddEmote("Cuco - Levitate", 15506503658)
+AddEmote("Cuco - Levitate", 15698511500)
+AddEmote("Victory Dance", 15506503658)
 AddEmote("HUGO Let's Drive!", 17360720445)
 
 
