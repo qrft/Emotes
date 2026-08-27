@@ -1,5 +1,6 @@
 --keybind to open is comma
 --made by Gi#7331
+--improved by z76v
 
 local IsStudio = false
 
