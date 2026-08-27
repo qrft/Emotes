@@ -1,5 +1,6 @@
 --keybind to open is comma
 --made by Gi#7331
+--improved by z76v
 
 local IsStudio = false
 
@@ -322,12 +323,17 @@ SearchBar:GetPropertyChangedSignal("Text"):Connect(function()
 			end
 		end
 	else
-		for i,button in pairs(buttons) do
-			if button:IsA("GuiButton") then
-				if button.Name == "Random" then
-					button.Visible = Settings.ShowRandomButton
-				else
-					button.Visible = true
+		-- When search is empty, apply Favorites Only filter
+		if Settings.ShowFavoritesOnly then
+			SortEmotes()
+		else
+			for i,button in pairs(buttons) do
+				if button:IsA("GuiButton") then
+					if button.Name == "Random" then
+						button.Visible = Settings.ShowRandomButton
+					else
+						button.Visible = true
+					end
 				end
 			end
 		end
@@ -549,7 +555,7 @@ AddEmote("Cuco - Levitate", 15698511500)
 AddEmote("Victory Dance", 15506503658)
 AddEmote("HUGO Let's Drive!", 17360720445)
 AddEmote("Beauty Touchdown", 16303091119)
-
+AddEmote("Sol de Janeiro - Samba", 16276506814)
 
 --finished loading
 Loading:Destroy()
@@ -706,6 +712,11 @@ local function CharacterAdded(Character)
 		EmoteButton.BackgroundColor3 = Color3.new(0, 0, 0)
 		EmoteButton.BorderSizePixel = 0
 		Ratio:Clone().Parent = EmoteButton
+		
+		-- Apply Favorites Only filter on startup
+		if Settings.ShowFavoritesOnly and not IsFavorited then
+			EmoteButton.Visible = false
+		end
 		local EmoteNumber = Instance.new("TextLabel")
 		EmoteNumber.Name = "number"
 		EmoteNumber.TextScaled = true
@@ -750,10 +761,15 @@ local function CharacterAdded(Character)
 				table.remove(FavoritedEmotes, index)
 				Favorite.Image = FavoriteOff
 				EmoteButton.LayoutOrder = Emote.sort[CurrentSort] + #Emotes
+				-- Hide button if Favorites Only is enabled and we just unfavorited
+				if Settings.ShowFavoritesOnly then
+					EmoteButton.Visible = false
+				end
 			else
 				table.insert(FavoritedEmotes, Emote.id)
 				Favorite.Image = FavoriteOn
 				EmoteButton.LayoutOrder = Emote.sort[CurrentSort]
+				-- Button should already be visible when favorited with Favorites Only enabled
 			end
 			WriteFileFunc("FavoritedEmotes.txt", HttpService:JSONEncode(FavoritedEmotes))
 		end)
@@ -772,6 +788,10 @@ local function CharacterAdded(Character)
 		end)
 	end
 	ButtonsBuilt = true
+	-- Apply Favorites Only filter after all buttons are built
+	if Settings.ShowFavoritesOnly then
+		SortEmotes()
+	end
 end
 
 if LocalPlayer.Character then
