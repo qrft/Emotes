@@ -1,6 +1,5 @@
 --keybind to open is comma
 --made by Gi#7331
---improved by z76v
 
 local IsStudio = false
 
@@ -556,6 +555,11 @@ AddEmote("Victory Dance", 15506503658)
 AddEmote("HUGO Let's Drive!", 17360720445)
 AddEmote("Beauty Touchdown", 16303091119)
 AddEmote("Sol de Janeiro - Samba", 16276506814)
+AddEmote("Mean Mug - Tommy Hilfiger", 10214415687)
+AddEmote("SpongeBob Imaginaaation 🌈", 18443268949)
+AddEmote("Baby Queen - Dramatic Bow", 14353419229)
+AddEmote("Baby Queen - Strut", 14353425085)
+AddEmote("Olivia Rodrigo - Head Bop", 80526885478167)
 
 --finished loading
 Loading:Destroy()
