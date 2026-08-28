@@ -562,6 +562,8 @@ AddEmote("Baby Queen - Dramatic Bow", 14353419229)
 AddEmote("Baby Queen - Strut", 14353425085)
 AddEmote("Olivia Rodrigo - Head Bop", 80526885478167)
 AddEmote("Rise Above - The Chainsmokers", 13071993910)
+AddEmote("DearALICE - Ariana", 133765015173412)
+AddEmote("Young-hee Head Spin", 134615135651900)
 
 --finished loading
 Loading:Destroy()
