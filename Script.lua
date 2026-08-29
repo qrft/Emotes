@@ -566,6 +566,10 @@ AddEmote("DearALICE - Ariana", 133765015173412)
 AddEmote("Young-hee Head Spin", 134615135651900)
 AddEmote("Alo Yoga Pose - Lotus Position", 12507097350)
 AddEmote("Bone Chillin' Bop", 15123050663)
+AddEmote("Fashion Spin", 130046968468383)
+AddEmote("Spiderman", 108635834286627)
+AddEmote("The Weeknd Starboy Strut", 130245358716273)
+AddEmote("Andys coming", 77935599895175)
 
 --finished loading
 Loading:Destroy()
