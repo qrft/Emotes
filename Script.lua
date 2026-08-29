@@ -569,6 +569,7 @@ AddEmote("Bone Chillin' Bop", 15123050663)
 AddEmote("Spiderman", 108635834286627)
 AddEmote("The Weeknd Starboy Strut", 130245358716273)
 AddEmote("Andys coming", 77935599895175)
+AddEmote("BURBERRY LOLA ATTITUDE - NIMBUS", 103525304516718)
 
 --finished loading
 Loading:Destroy()
