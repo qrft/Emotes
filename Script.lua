@@ -564,6 +564,7 @@ AddEmote("Olivia Rodrigo - Head Bop", 80526885478167)
 AddEmote("Rise Above - The Chainsmokers", 13071993910)
 AddEmote("DearALICE - Ariana", 133765015173412)
 AddEmote("Young-hee Head Spin", 134615135651900)
+AddEmote("Alo Yoga Pose - Lotus Position", 12507097350)
 
 --finished loading
 Loading:Destroy()
